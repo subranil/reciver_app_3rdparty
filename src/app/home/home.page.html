@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Blank </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container"></div>
+
+  <div *ngIf="isLoaded">
+    <ngx-doc-viewer
+      [url]="artifactUrl"
+      viewer="google"
+      style="width: 100%; height: 100vh"
+    ></ngx-doc-viewer>
+  </div>
+  <ion-button expand="block" fill="outline" (click)="test()">Normal Deeplink</ion-button>
+  <ion-button expand="block" fill="outline" (click)="test2()">search Request test or search filter test</ion-button>
+  <ion-button expand="block" fill="outline" (click)="test3()">Router navigation to Page test</ion-button>
+  <ion-button expand="block" fill="outline" (click)="test4()">setting profile attribute with bms test</ion-button>
+  <ion-button expand="block" fill="outline" (click)="test5()">Normal doId test </ion-button>
+</ion-content>
